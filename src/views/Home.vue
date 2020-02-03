@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="test">test</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+/*eslint no-console:off */
 export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods:{
+    test(){
+      console.log("進入")
+    }
   }
 }
 </script>
+
+<style  scoped>
+button{
+  width: 40px;
+  height: 40px;
+}
+</style>
