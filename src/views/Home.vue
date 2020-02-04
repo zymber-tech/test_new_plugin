@@ -5,24 +5,33 @@
 </template>
 
 <script>
-// @ is an alias to /src
+/* global CosmosBeaconCordovaPlugin */
 /*eslint no-console:off */
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  },
-  methods:{
-    test(){
-      console.log("進入")
+  name: "home",
+  methods: {
+    test() {
+      console.log("進入");
+      CosmosBeaconCordovaPlugin.echo("太棒了!");
+      CosmosBeaconCordovaPlugin.getDate(
+        res => {
+          console.log("現在時間：", res);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+      CosmosBeaconCordovaPlugin.startScan(res=>{
+        console.log("藍芽狀態：",res)
+      })
     }
   }
-}
+};
 </script>
 
 <style  scoped>
-button{
-  width: 40px;
-  height: 40px;
+button {
+  width: 150px;
+  height: 150px;
 }
 </style>
