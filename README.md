@@ -1,29 +1,19 @@
 # test_new_plugin
+測試cordova-plugin-cosmos-beacon用
 
 ## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+```bash
+$ npm install
+$ cordova plugin add --link ../cordova-plugin-cosmos-beacon
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
+### Build android
+```bash
+$ npm run build
+$ cordova platform add android
 ```
 
-### Lints and fixes files
+### Rebuild android
+```bash
+$ ./test_android.sh
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
