@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <button @click="test">test</button>
+    <button @click="startScan">掃瞄</button>
+    <center>Beacon 列表</center>
+    <div>
+      <li></li>
+    </div>
   </div>
 </template>
 
@@ -9,8 +13,13 @@
 /*eslint no-console:off */
 export default {
   name: "home",
+  data(){
+    return{
+      beacon_list:[]
+    }
+  },
   methods: {
-    test() {
+    startScan() {
       console.log("進入");
       CosmosBeaconCordovaPlugin.echo("太棒了!");
       CosmosBeaconCordovaPlugin.getDate(
@@ -21,9 +30,9 @@ export default {
           console.log(err);
         }
       );
-      CosmosBeaconCordovaPlugin.startScan(res=>{
-        console.log("藍芽狀態：",res)
-      })
+      CosmosBeaconCordovaPlugin.startScan(res => {
+        console.log("藍芽狀態：", res);
+      });
     }
   }
 };
