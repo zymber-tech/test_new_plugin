@@ -2,7 +2,7 @@
   "cordova-plugin-cosmos-beacon": {
     "source": {
       "type": "local",
-      "path": "/Users/nelson/Desktop/test_new_plugin/node_modules/cordova-plugin-cosmos-beacon"
+      "path": "C:\\Users\\USER\\Documents\\GitHub\\test_new_plugin\\node_modules\\cordova-plugin-cosmos-beacon"
     },
     "is_top_level": true,
     "variables": {}
@@ -10,7 +10,7 @@
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-whitelist@1"
+      "id": "cordova-plugin-whitelist@^1.3.4"
     },
     "is_top_level": true,
     "variables": {}
