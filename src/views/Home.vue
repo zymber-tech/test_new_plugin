@@ -4,6 +4,7 @@
     <button @click="Bluetooth_status">Bluetooth_status</button>
     <button @click="writePermission">writePermission</button>
     <button @click="locationPermission">locationPermission</button>
+    <button @click="getDeviceInfo">getDeviceInfo</button>
     
   </div>
 </template>
@@ -11,6 +12,7 @@
 <script>
 /* global CosmosBeaconCordovaPlugin */
 /*eslint no-console:off */
+
 export default {
   name: "home",
   methods: {
@@ -40,9 +42,23 @@ export default {
       CosmosBeaconCordovaPlugin.CheckLocationPermission(res=>{
         console.log("位置權限：",res);
       })
+    },/*
+    getDeviceInfo(){
+      CosmosBeaconCordovaPlugin.getDeviceInfo(async (res)=>{
+        console.log("Device Info：",res);
+      })
+    }*/ 
+    
+    getDeviceInfo(){
+      CosmosBeaconCordovaPlugin.getDeviceInfo(res=>{
+        console.log("Device Info：",res);
+      })
     }
+    
   }
 };
+
+
 </script>
 
 <style  scoped>
